@@ -3,7 +3,7 @@
  * Plugin Name: Exalting
  * Plugin URI: https://exalting.de
  * Description: Exalting Adaptions
- * Version: 1.0.6
+ * Version: 1.0.7
  * Author: Your Name
  * Author URI: https://exalting.de
  */
@@ -67,11 +67,6 @@ function theme_wc_setup(): void {
 add_filter('woocommerce_enable_order_notes_field', '__return_false');
 add_action('after_setup_theme', 'theme_wc_setup');
 
-//Change Place Order Text
-function misha_custom_button_text( $button_text ): string {
-	return 'Risikofrei bestellen'; // new text is here
-}
-add_filter( 'woocommerce_order_button_text', 'misha_custom_button_text' );
 
 // Text unter Place Order
 function bbloomer_privacy_message_below_checkout_button() {
